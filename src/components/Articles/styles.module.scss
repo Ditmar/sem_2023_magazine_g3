@@ -1,6 +1,7 @@
 @import '../../app/variables';
 @import '../../app/mixins';
 
+// contenedor principal
 .container {
     position: relative;
     display: flex;
@@ -10,6 +11,7 @@
     flex-wrap: wrap;
     
 }
+//Titulo
 .titulo {
     color: #01461D;
     margin: auto;
@@ -18,17 +20,48 @@
     line-height: 78px;
     text-align: center;
     font-family: Montserrat, sans-serif;
+    @include respond-to('large'){
+        font-size: 3rem;
+    }
+    @include respond-to('medium'){
+        font-size: 2rem;
+    }
+    @include respond-to('small'){
+        font-size: 2rem;
+    }
 }
+
 .article{
-    margin: 50px;
+    margin: 50px; // ajuste del margen
 }
+
+// imagen
 .image{
     max-width: 341px;
     max-height: 516px;
     min-width: 169px;
     min-height: 256px;
     margin: 15px;
+    @include respond-to('large'){
+        width: 341px;
+        image {
+            height: 516px;
+        }
+    }
+    @include respond-to('medium'){
+        width: 255px;
+        image{
+            height: 386;
+        }
+    }
+    @include respond-to('small'){
+        width: 170px;
+        image{
+            height: 257px;
+        }
+    }
 }
+// texto
 .text {
     color: #000000;
     margin: auto;
@@ -37,7 +70,17 @@
     line-height: 49px;
     text-align: center;
     font-family: Lato, sans-serif;
+    @include respond-to('large'){
+        font-size: 1.8rem;
+    }
+    @include respond-to('medium'){
+        font-size: 1.5rem;
+    }
+    @include respond-to('small'){
+        font-size: 1.2rem;
+    }
 }
+// volumen
 .vol{
     color: #01461D;
     margin: auto;
@@ -46,4 +89,13 @@
     line-height: 56px;
     text-align: center;
     font-family: Roboto, sans-serif;
+    @include respond-to('large'){
+        font-size: 2rem;
+    }
+    @include respond-to('medium'){
+        font-size: 1.8rem;
+    }
+    @include respond-to('small'){
+        font-size: 1.5rem;
+    }
 }
